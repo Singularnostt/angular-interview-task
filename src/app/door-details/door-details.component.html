@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onSave()">
+  <mat-form-field appearance="fill">
+    <mat-label>Door number</mat-label>
+    <input formControlName="number" type="number" matInput />
+    <mat-error *ngIf="form.invalid">
+      Door number <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <div style="margin-top: 15px">
+    <button mat-flat-button color="primary" type="submit">Save</button>
+  </div>
+</form>
